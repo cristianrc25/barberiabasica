@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Hace que los elementos dentro del contenedor se muestren en línea y centrados horizontal y verticalmente */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Establece el color de fondo del contenedor como transparente */
+        background-color: transparent;
+        /* Agrega un espacio de relleno de 10 píxeles arriba y abajo, y 0 píxeles a la izquierda y derecha */
+        padding: 10px 0;
+      }
+      /* Establece el color del texto y la decoración del enlace en blanco */
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        /* Agrega un margen de 0 píxeles arriba y abajo, y 30 píxeles a la izquierda y derecha */
+        margin: 0 30px;
+        /* Establece el tamaño de fuente del texto en 20 píxeles */
+        font-size: 20px;
+        /* Agrega una transición suave en la propiedad de color del texto */
+        transition: color 0.3s;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+      /* Establece el color del texto del enlace cuando se pasa el mouse sobre él en un tono amarillo */
+      .navbar a:hover {
+        color: #fc0;
+        /* Escala el tamaño del enlace al 105% del tamaño original */
+        transform: scale(1.05);
+      }
+
+      form {
+        /* Establece el fondo del formulario como transparente */
+        background-color: transparent;
+        /* Agrega un relleno interno de 10px */
+        padding: 10px;
+        /* Centra el formulario horizontalmente en la página */
+        margin: 0 auto;
+        /* Establece el ancho del formulario en 450px */
+        width: 450px;
+        /* Establece la fuente del formulario como Lucida Sans u otras fuentes de respaldo */
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        /* Agrega bordes redondeados al formulario */
+        border-radius: 9px;
+        /* Establece el texto dentro del formulario en color blanco */
+        color: #fff;
+        /* Establece el alineamiento del texto dentro del formulario como centrado */
+        text-align: center;
+      }
+
+      /*Afecta a todos los input*/
+      input {
+        /* Elimina el borde del elemento */
+        border: 0;
+        /* Elimina el contorno que aparece al hacer clic en el elemento */
+        outline: none;
+        /* Establece el ancho del elemento a 280px */
+        width: 280px;
+      }
+
+      /*Afecta a todos los que tengan la misma clase*/
+      .field {
+        border: solid 1px #ccc; /* Establece un borde sólido de 1 píxel con un color gris claro (#ccc) */
+        padding: 10px; /* Establece un relleno interior de 10 píxeles */
+      }
+
+      .btn {
+        border-radius: 3px; /* Define el radio de las esquinas del botón */
+        display: inline-block; /* Hace que el botón se muestre en línea con otros elementos */
+        padding: 20px 15px; /* Define el espacio de relleno (padding) en el botón */
+        text-decoration: none; /* Quita cualquier decoración de texto en el botón */
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); /* Agrega una sombra al texto del botón */
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Agrega una sombra alrededor del botón */
+      }
+
+      .btn-enviar,
+      .btn-cancelar {
+        color: white; /* Define el color del texto del botón como blanco */
+        background-color: #903; /* Define el color de fondo del botón como un tono de marrón */
+      }
+
+      /*Cuando el cursor esta sobre el boton este cambia de color*/
+      .btn-enviar:hover {
+        background-color: #900;
+      }
+      /*Cuando el boton fue usado este cambia de color*/
+      .btn-enviar:active {
+        background-color: rgb(56, 3, 3);
+      }
+
+      /*Cuando el cursor esta sobre el boton este cambia de color*/
+      .btn-cancelar:hover {
+        background-color: #900;
+      }
+      /*Cuando el boton fue usado este cambia de color*/
+      .btn-cancelar:active {
+        background-color: rgb(56, 3, 3);
+      }
+
+      body {
+        background-image: url(https://joseppons.com/formacion/wp-content/uploads/2020/11/servicios-salon-barberia.jpeg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Esto es el navbar-->
+    <nav class="navbar">
+      <a href="Inicio.html">Inicio</a>
+      <a href="personal.html">Personal</a>
+      <a href="formulario.html">Reserva</a>
+      <a href="contacto.html">Contactanos</a>
+    </nav>
+    <br /><br />
+    <!--Esto es el formulario para hacer la reserva-->
+    <form action="">
+      <p>Nombre:</p>
+      <input
+        type="text"
+        class="field"
+        placeholder="Ingrese su nombre completo"
+        maxlength=""
+        required
+      />
+      <br />
+
+      <p>Correo electrónico:</p>
+      <input
+        type="email"
+        class="field"
+        placeholder="ejemplo@dominio.com"
+        required
+      />
+      <br />
+
+      <p>Numero de telefono:</p>
+      <input
+        type="number"
+        class="field"
+        placeholder="Ingrese su numero de telefono"
+        required
+      />
+      <br />
+
+      <p>Fecha/Hora:</p>
+      <p>
+        <input type="date" class="field" required /><br /><br />
+        <input type="time" class="field" required />
+      </p>
+      <p><br /></p>
+      <!--Fielset para los servicios y se encuentran los checkbos que calculan el precio-->
+      <fieldset>
+        <legend>Servicios</legend>
+
+        <label>
+          <div align="center"><span class="orden">Recorte</span></div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="RecorteBS" value="15" />
+            <br />
+          </span>
+          <span class="orden"></span> <span class="orden"> </span>
+          <span class="orden"> </span>
+        </div>
+        <span class="orden">
+          <label> </label>
+        </span>
+        <label>
+          <div align="center"><span class="orden">Tinte de cabello</span></div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="TinteBS" value="20" />
+            <br />
+          </span>
+          <span class="orden"></span> <span class="orden"> </span>
+          <span class="orden"> </span>
+        </div>
+        <span class="orden">
+          <label> </label>
+        </span>
+        <label>
+          <div align="center"><span class="orden">Mascarilla</span></div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="MascarillaBS" value="25" />
+            <br />
+          </span>
+          <span class="orden"></span> <span class="orden"> </span>
+          <span class="orden"> </span>
+        </div>
+        <span class="orden">
+          <label> </label>
+        </span>
+        <label>
+          <div align="center"><span class="orden">Tinte de barba</span></div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="BarbaBS" value="20" />
+            <br />
+          </span>
+          <span class="orden"></span> <span class="orden"> </span>
+          <span class="orden"> </span>
+        </div>
+        <span class="orden">
+          <label> </label>
+        </span>
+        <label>
+          <div align="center">
+            <span class="orden">Corte y delineado de barba</span>
+          </div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="DelineadoBS" value="35" />
+            <br />
+          </span>
+          <span class="orden"></span> <span class="orden"> </span>
+          <span class="orden"> </span>
+        </div>
+        <span class="orden">
+          <label> </label>
+        </span>
+        <label>
+          <div align="center">
+            <span class="orden">Perfilado de cejas</span>
+          </div>
+        </label>
+        <div align="center">
+          <span class="orden">
+            <input type="checkbox" class="PerfiladoBS" value="15" />
+          </span>
+        </div>
+        <span class="orden"> </span><span class="orden"></span
+        ><span class="orden"> </span>
+      </fieldset>
+      <p class="center-content">
+        <input type="submit" class="btn btn-enviar" value="Enviar Datos" />
+      </p>
+      <p class="center-content">
+        <input type="submit" class="btn btn-cancelar" value="Cancelar" />
+      </p>
+    </form>
+
+    <script>
+      /*const formulario = document.querySelector("form"); - Busca el primer elemento HTML que tenga la etiqueta <form> y lo almacena en una variable llamada "formulario".
+const botonEnviar = document.querySelector(".btn-enviar"); - Busca el primer elemento HTML que tenga la clase "btn-enviar" y lo almacena en una variable llamada "botonEnviar".*/
+      const formulario = document.querySelector("form");
+      const botonEnviar = document.querySelector(".btn-enviar");
+      /*botonEnviar.addEventListener("click", function(event) {...}); - Agrega un evento "click" al botón "botonEnviar" que ejecuta una función anónima cuando el botón es presionado.
+event.preventDefault(); - Evita que la acción por defecto del botón (enviar el formulario) se ejecute.
+let precioTotal = 0; - Crea una variable llamada "precioTotal" e inicializa su valor en 0.
+const checkboxInputs = document.querySelectorAll('input[type="checkbox"]:checked'); - Busca todos los elementos HTML que sean de tipo "checkbox" y estén seleccionados y los almacena en una variable llamada "checkboxInputs".*/
+      botonEnviar.addEventListener("click", function (event) {
+        event.preventDefault();
+        let precioTotal = 0;
+        const checkboxInputs = document.querySelectorAll(
+          'input[type="checkbox"]:checked'
+        );
+        /*checkboxInputs.forEach(function(input) {...}); - Itera sobre cada elemento en "checkboxInputs" y ejecuta una función anónima en cada iteración.
+switch(input.classList[0]) {...} - Verifica la primera clase del elemento actual en el ciclo y ejecuta una acción dependiendo del valor de la clase.
+case 'RecorteBS': precioTotal += 15; break; - Si la clase del elemento actual es "RecorteBS", suma 15 al valor de "precioTotal".*/
+        checkboxInputs.forEach(function (input) {
+          switch (input.classList[0]) {
+            case "RecorteBS":
+              precioTotal += 25;
+              break;
+            case "TinteBS":
+              precioTotal += 30;
+              break;
+            case "MascarillaBS":
+              precioTotal += 25;
+              break;
+            case "BarbaBS":
+              precioTotal += 20;
+              break;
+            case "DelineadoBS":
+              precioTotal += 35;
+              break;
+            case "PerfiladoBS":
+              precioTotal += 40;
+              break;
+          }
+        });
+        /*const descuento = precioTotal * 0.02; calcula el valor del descuento (2% del precio total) y lo almacena en la variable descuento.
+const precioFinal = precioTotal - descuento; calcula el precio final (precio total menos el descuento) y lo almacena en la variable precioFinal*/
+        const descuento = precioTotal * 0.05;
+        const precioFinal = precioTotal - descuento;
+        /*alert(Se ha registrado su reserva. El precio total es de ${precioTotal.toFixed(2)} Bs. con un descuento del 2% de ${descuento.toFixed(2)} Bs. El total a pagar con descuento es de ${precioFinal.toFixed(2)} Bs.); muestra una alerta con el precio total, el descuento y el precio final a pagar.
+formulario.reset(); reinicia el formulario (elimina los valores seleccionados por el usuario). */
+        alert(
+          `Se ha registrado su reserva. El precio total es de ${precioTotal.toFixed(
+            2
+          )} Bs. con un descuento del 5% de ${descuento.toFixed(
+            2
+          )} Bs. El total a pagar con descuento es de ${precioFinal.toFixed(
+            2
+          )} Bs.`
+        );
+        formulario.reset();
+      });
+
+      const form = document.querySelector("form");
+      /*se crea una constante llamada formulario que apunta al primer elemento "form" que encuentra en el documento HTML utilizando el método querySelector.*/
+      const botonCancelar = document.querySelector(".btn-cancelar");
+      /*se crea una constante llamada botonEnviar que apunta al elemento con el ID "btnEnviar" utilizando el método querySelector.*/
+      /*se agrega un "escuchador de eventos" al elemento formulario utilizando el método addEventListener. Esto significa que el código dentro de la función se ejecutará cuando se detecte el evento "submit" en el formulario
+    La función que se pasa como segundo argumento en addEventListener toma un objeto de evento como parámetro (en este caso, se nombra event).
+Dentro de la función, el primer comando preventDefault() detiene la acción predeterminada del evento "submit" (que sería enviar el formulario a un servidor y recargar la página), evitando así que se recargue la página*/
+      formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+        /*Luego, se muestra una alerta al usuario que dice "Se ha registrado su solicitud".
+
+Por último, el formulario se "resetea" utilizando el método reset(), que limpia los valores de todos los elementos del formulario para que el usuario pueda enviar otra solicitud sin tener que borrar manualmente los datos anteriores.*/
+        alert("Se cancelo su solicitud");
+        formulario.reset();
+      });
+    </script>
+  </body>
+</html>

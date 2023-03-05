@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+    <style>
+      /* Estilos generales para el cuerpo del documento */
+      body {
+        font-family: Arial, sans-serif; /* Establece la fuente predeterminada para el texto en el cuerpo del documento */
+        background-color: #f7f7f7; /* Establece el color de fondo del cuerpo del documento en gris claro */
+        background-image: url("img/galeria7.jpg"); /* Establece la imagen de fondo del cuerpo del documento */
+        background-repeat: no-repeat; /* Establece que la imagen de fondo no se repita */
+        background-size: cover; /* Establece que la imagen de fondo cubra todo el cuerpo del documento */
+      }
+
+      /* Estilos para el formulario */
+      form {
+        width: 500px; /* Establece un ancho fijo para el formulario */
+        margin: 0 auto; /* Centra el formulario horizontalmente */
+        padding: 25px; /* Establece un espacio interno de 25 píxeles para el contenido del formulario */
+        background-color: #fff; /* Establece el color de fondo del formulario en blanco */
+        border-radius: 20px; /* Establece un radio de borde de 20 píxeles para el formulario */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Establece una sombra para el formulario */
+      }
+
+      /* Estilos para los conjuntos de campos */
+      fieldset {
+        margin-bottom: 20px; /* Establece un margen inferior de 20 píxeles para los conjuntos de campos */
+        border: 1px solid #ddd; /* Establece un borde de 1 píxel sólido con un color gris claro para los conjuntos de campos */
+        border-radius: 5px; /* Establece un radio de borde de 5 píxeles para los conjuntos de campos */
+        padding: 10px; /* Establece un espacio interno de 10 píxeles para el contenido de los conjuntos de campos */
+      }
+
+      /* Estilos para la leyenda */
+      legend {
+        font-size: 20px; /* Establece el tamaño de fuente para la leyenda en 20 píxeles */
+        font-weight: bold; /* Establece el grosor de la fuente para la leyenda en negrita */
+      }
+
+      /* Estilos para las etiquetas de los campos */
+      label {
+        display: block; /* Establece las etiquetas de los campos como elementos de bloque */
+        margin-bottom: 5px; /* Establece un margen inferior de 5 píxeles para las etiquetas de los campos */
+      }
+
+      /* Estilos para campos de entrada de texto, correo electrónico, número y área de texto */
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea {
+        /* Ancho del elemento del formulario al 100% */
+        width: 100%;
+        /* Agregar 10px de relleno dentro del elemento */
+        padding: 10px;
+        /* Redondear las esquinas del borde */
+        border-radius: 5px;
+        /* Agregar un borde de 1px sólido de color #ddd */
+        border: 1px solid #ddd;
+        /* Incluir el relleno y el borde dentro del ancho del elemento */
+        box-sizing: border-box;
+        /* Agregar un margen inferior de 20px para separar los campos del formulario */
+        margin-bottom: 20px;
+      }
+
+      /* Estilos para botones de envío y reinicio */
+      input[type="submit"],
+      input[type="reset"] {
+        /* Ancho del botón al 20% */
+        width: 20%;
+        /* Color de fondo del botón */
+        background-color: #903;
+        /* Color del texto en el botón */
+        color: #fff;
+        /* Agregar 15px de relleno dentro del botón */
+        padding: 15px;
+        /* Eliminar el borde del botón */
+        border: none;
+        /* Redondear las esquinas del borde */
+        border-radius: 15px;
+        /* Cambiar el cursor al puntero cuando el usuario pase el mouse sobre el botón */
+        cursor: pointer;
+        /* Agregar un margen superior de 15px para separar el botón del campo del formulario */
+        margin-top: 15px;
+        /* Tamaño del texto en el botón */
+        font-size: 16px;
+        /* Centrar el texto en el botón */
+        text-align: center;
+      }
+
+      /* Estilos para cuando el usuario pasa el mouse sobre el botón de envío o reinicio */
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        /* Cambiar el color de fondo del botón cuando el usuario pasa el mouse sobre él */
+        background-color: #c33;
+      }
+
+      /* Estilos específicos del formulario */
+
+      /* Estilos para el primer fieldset */
+      fieldset:nth-of-type(1) {
+        /* Fondo gris claro */
+        background-color: #f9f9f9;
+      }
+
+      /* Estilos para el tercer fieldset */
+      fieldset:nth-of-type(3) {
+        /* Fondo gris claro */
+        background-color: #f9f9f9;
+      }
+
+      /* Estilos para la lista dentro de un fieldset */
+      fieldset ul {
+        /* Sin estilo de lista */
+        list-style-type: none;
+        /* Sin margen */
+        margin: 0;
+        /* Sin relleno */
+        padding: 0;
+      }
+
+      /* Estilos para los elementos de la lista dentro de un fieldset */
+      fieldset ul li {
+        /* Mostrar elementos de la lista en línea */
+        display: inline-block;
+        /* Margen derecho entre elementos */
+        margin-right: 10px;
+      }
+
+      /* Estilos para los encabezados h1 */
+      .h1 {
+        /* Color blanco */
+        color: #ffffff;
+        /* Familia de fuentes Tahoma, Geneva, sans-serif */
+        font-family: Tahoma, Geneva, sans-serif;
+        /* Centrar el texto */
+        text-align: center;
+      }
+
+      /* Estilos para el elemento textarea */
+      textarea {
+        /* Altura de 100px */
+        height: 100px;
+      }
+
+      /* Hace que los elementos dentro del contenedor se muestren en línea y centrados horizontal y verticalmente */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Establece el color de fondo del contenedor como transparente */
+        background-color: transparent;
+        /* Agrega un espacio de relleno de 10 píxeles arriba y abajo, y 0 píxeles a la izquierda y derecha */
+        padding: 10px 0;
+      }
+      /* Establece el color del texto y la decoración del enlace en blanco */
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        /* Agrega un margen de 0 píxeles arriba y abajo, y 30 píxeles a la izquierda y derecha */
+        margin: 0 30px;
+        /* Establece el tamaño de fuente del texto en 20 píxeles */
+        font-size: 20px;
+        /* Agrega una transición suave en la propiedad de color del texto */
+        transition: color 0.3s;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+
+      /* Establece el color del texto del enlace cuando se pasa el mouse sobre él en un tono amarillo */
+      .navbar a:hover {
+        color: #fc0;
+        /* Escala el tamaño del enlace al 105% del tamaño original */
+        transform: scale(1.05);
+      }
+
+      .btns {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="Inicio.html">Inicio</a>
+      <a href="personal.html">Personal</a>
+      <a href="formulario.html">Reserva</a>
+      <a href="contacto.html">Contactanos</a>
+    </nav>
+    <br />
+    <h1 class="h1">CONTACTANOS</h1>
+    <br />
+    <form>
+      <fieldset class="letras">
+        <label>Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          maxlength="20"
+          placeholder="Escriba aqui su nombre"
+          required
+        />
+
+        <label>Correo electronico:</label>
+        <input type="email" placeholder="ejemplo@luisa.com" required />
+
+        <label>Telefono:</label>
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          minlength="8"
+          maxlength="8"
+          step="8"
+          placeholder="ej +591 77788990"
+          required
+        />
+        <label>Deseas recibir nuestras promociones?</label
+        ><input type="checkbox" /> <br /><br />
+        <textarea
+          class="mensaje"
+          cols="50"
+          rows="10"
+          placeholder="Mensaje"
+        ></textarea>
+      </fieldset>
+      <div class="btns">
+        <input id="btnEnviar" type="submit" value="Enviar" />
+        <input type="submit" value="Cancelar" class="btnCancelar" />
+      </div>
+    </form>
+
+    <script>
+      const formulario =
+        document.querySelector(
+          "form"
+        ); /*Esta línea declara una constante llamada formulario y la inicializa con la referencia al primer elemento form que se encuentre en el documento HTML.*/
+      const botonEnviar =
+        document.querySelector(
+          "#btnEnviar"
+        ); /*Esta línea declara una constante llamada botonEnviar y la inicializa con la referencia al primer elemento con el id btnEnviar que se encuentre en el documento HTML.*/
+      const botonCancelar =
+        document.querySelector(
+          ".btnCancelar"
+        ); /*Esta línea declara una constante llamada botonCancelar y la inicializa con la referencia al primer elemento con la clase btnCancelar que se encuentre en el documento HTML.*/
+
+      /*Esta sección de código agrega un escucha de evento al formulario que escucha el evento submit. Cuando el usuario envía el formulario (hace clic en el botón enviar), se ejecuta la función de devolución de llamada (callback) que se proporciona. En este caso, la función muestra una alerta que dice "Se ha registrado su solicitud" y luego restablece el formulario a su estado inicial (elimina los datos ingresados por el usuario).*/
+      formulario.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Se ha registrado su solicitud");
+        formulario.reset();
+      });
+
+      /*Esta sección de código agrega un escucha de evento al botón de cancelar que escucha el evento click. Cuando el usuario hace clic en el botón de cancelar, se ejecuta la función de devolución de llamada (callback) que se proporciona. En este caso, la función muestra una alerta que dice "Se borrarán los datos del formulario" y luego restablece el formulario a su estado inicial (elimina los datos ingresados por el usuario).*/
+      botonCancelar.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Se borrarán los datos del formulario");
+        formulario.reset();
+      });
+    </script>
+  </body>
+</html>

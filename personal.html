@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Hace que los elementos dentro del contenedor se muestren en línea y centrados horizontal y verticalmente */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Establece el color de fondo del contenedor como transparente */
+        background-color: transparent;
+        /* Agrega un espacio de relleno de 10 píxeles arriba y abajo, y 0 píxeles a la izquierda y derecha */
+        padding: 10px 0;
+      }
+      /* Establece el color del texto y la decoración del enlace en blanco */
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        /* Agrega un margen de 0 píxeles arriba y abajo, y 30 píxeles a la izquierda y derecha */
+        margin: 0 30px;
+        /* Establece el tamaño de fuente del texto en 20 píxeles */
+        font-size: 20px;
+        /* Agrega una transición suave en la propiedad de color del texto */
+        transition: color 0.3s;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+      /* Establece el color del texto del enlace cuando se pasa el mouse sobre él en un tono amarillo */
+      .navbar a:hover {
+        color: #fc0;
+        /* Escala el tamaño del enlace al 105% del tamaño original */
+        transform: scale(1.05);
+      }
+
+      .tablacentro {
+        text-align: center; /*centra el texto dentro del elemento que tiene esta clase.*/
+        font-family: Verdana, Geneva, sans-serif; /*establece el tipo de fuente utilizada para el texto dentro del elemento como Verdana, Geneva o cualquier otra fuente sans-serif*/
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /*establece el color de fondo del elemento como blanco con un nivel de transparencia del 50%*/
+        height: 240px; /* establece la altura del elemento en 240 píxeles*/
+      }
+
+      .galeria9 {
+        margin: 20px; /*establece un margen exterior de 20 píxeles alrededor del elemento*/
+        height: 333px; /*establece una altura fija de 333 píxeles para el elemento*/
+        border-radius: 5px; /*aplica un borde redondeado de 5 píxeles al elemento*/
+        background: var(
+          --i
+        ); /* establece un color de fondo personalizado utilizando una variable CSS llamada "--i"*/
+        background-size: cover; /*ajusta el tamaño del fondo para cubrir completamente el elemento*/
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); /*agrega una sombra al elemento con un desplazamiento horizontal de 3 píxeles, un desplazamiento vertical de 5 píxeles y un desenfoque de 5 píxeles en un color azul oscuro*/
+        overflow: hidden; /* establece el comportamiento del elemento si su contenido sobrepasa los límites del elemento. En este caso, el contenido se oculta*/
+        object-fit: cover; /* ajusta el tamaño de la imagen dentro del elemento para que cubra completamente el área del elemento sin distorsionarse*/
+      }
+      .letras {
+        font-size: 18px; /* Establece el tamaño de fuente de 18 píxeles */
+        color: #000; /* Establece el color del texto a negro (#000) */
+        text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+      }
+      body {
+        background-image: url(img/barberia); /*Establece la imagen de fondo para el cuerpo.*/
+        background-repeat: no-repeat; /*Controla si la imagen de fondo debe repetirse en caso de que sea más pequeña que el área del cuerpo. En este caso, "no-repeat" indica que la imagen no se repetirá.*/
+        background-size: cover; /*Establece el tamaño de la imagen de fondo. "Cover" indica que la imagen debe cubrir todo el cuerpo y ajustarse a su tamaño.*/
+      }
+
+      .galeria91 {
+        margin: 20px; /* Define un margen de 20 píxeles alrededor de la galería */
+        height: 333px; /* Establece la altura de la galería en 333 píxeles */
+        border-radius: 5px; /* Establece un radio de borde de 5 píxeles, creando esquinas redondeadas */
+        background: var(
+          --i
+        ); /* Establece un color de fondo usando la variable CSS --i */
+        background-size: cover; /* Escala la imagen de fondo para cubrir todo el elemento */
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); /* Crea una sombra con desplazamiento y difuminado para la galería */
+        overflow: hidden; /* Oculta el contenido que se desborda del elemento */
+        transition: 0.5s; /* Agrega una transición de medio segundo a los cambios de estado de la galería */
+        object-fit: cover; /* Controla cómo se ajusta la imagen de fondo dentro del elemento */
+      }
+      .galeria92 {
+        margin: 20px; /* Define un margen de 20 píxeles alrededor del elemento. */
+        height: 333px; /* Establece la altura del elemento en 333 píxeles. */
+        border-radius: 5px; /* Agrega un borde redondeado de 5 píxeles al elemento. */
+        background: var(
+          --i
+        ); /* Establece el color de fondo del elemento con la variable CSS "--i". */
+        background-size: cover; /* Hace que la imagen de fondo cubra todo el elemento. */
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); /* Agrega una sombra al elemento. */
+        overflow: hidden; /* Oculta cualquier contenido que desborde del elemento. */
+        transition: 0.5s; /* Añade un efecto de transición suave a cualquier cambio de estilo en el elemento. */
+        object-fit: cover; /* Ajusta la imagen dentro del elemento para cubrir todo el espacio disponible sin distorsionarla. */
+      }
+      .galeria93 {
+        margin: 20px; /* Define un margen de 20 píxeles alrededor del elemento. */
+        height: 333px; /* Establece la altura del elemento en 333 píxeles. */
+        border-radius: 5px; /* Agrega un borde redondeado de 5 píxeles al elemento. */
+        background: var(
+          --i
+        ); /* Establece el color de fondo del elemento con la variable CSS "--i". */
+        background-size: cover; /* Hace que la imagen de fondo cubra todo el elemento. */
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); /* Agrega una sombra al elemento. */
+        overflow: hidden; /* Oculta cualquier contenido que desborde del elemento. */
+        transition: 0.5s; /* Añade un efecto de transición suave a cualquier cambio de estilo en el elemento. */
+        object-fit: cover; /* Ajusta la imagen dentro del elemento para cubrir todo el espacio disponible sin distorsionarla. */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="Inicio.html">Inicio</a>
+      <a href="personal.html">Personal</a>
+      <a href="formulario.html">Reserva</a>
+      <a href="contacto.html">Contactanos</a>
+    </nav>
+    <div align="center">
+      <br />
+      <br />
+
+      <table width="1267" height="379" border="0" class="tablacentro">
+        <tr>
+          <td width="538" height="375" class="letras">
+            <dl>
+              <dt>
+                <span class="tablacentro1"><strong>Nombre:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Daniel Alejandro</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Apellido:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Mariscal Calle</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Edad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">35 años</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Especialidad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Corte de todo tipo</span></li>
+              </dd>
+              <dd>
+                <li>
+                  <span class="tablacentro1">Corte y delineado de barba</span>
+                </li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Tinte de cabello</span></li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Mascarilla</span></li>
+              </dd>
+              <dd>
+                <li>
+                  <span class="tablacentro1">Tratamiento de cabello</span>
+                </li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Tratamiento capilar</span></li>
+              </dd>
+            </dl>
+          </td>
+          <td width="719">
+            <span class="tablacentro1"
+              ><img src="img/henry.jpg" alt="g9" class="galeria9"
+            /></span>
+          </td>
+        </tr>
+      </table>
+      <table width="1268" height="376" border="0" class="tablacentro">
+        <tr>
+          <td width="616">
+            <span class="tablacentro1"
+              ><img src="img/raul-barbero.jpg" alt="g9" class="galeria91"
+            /></span>
+          </td>
+          <td width="642" class="letras">
+            <dl>
+              <dt>
+                <span class="tablacentro1"><strong>Nombre:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Raul</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Apellido:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Zarate Rendon</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Edad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">22 años</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Especialidad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Corte de todo tipo</span></li>
+              </dd>
+              <dd>
+                <li>
+                  <span class="tablacentro1">Corte y delineado de barba</span>
+                </li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Tinte de barba</span></li>
+              </dd>
+            </dl>
+          </td>
+        </tr>
+      </table>
+      <table width="1266" height="376" border="0" class="tablacentro">
+        <tr>
+          <td width="607" class="letras">
+            <dl>
+              <dt>
+                <span class="tablacentro1"><strong>Nombre:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Rodrigo</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Apellido:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Casemiro</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Edad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">27 años</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Especialidad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Corte de todo tipo</span></li>
+              </dd>
+              <dd>
+                <li>
+                  <span class="tablacentro1">Corte y delineado de barba</span>
+                </li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Tinte de cabello</span></li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Mascarilla</span></li>
+              </dd>
+            </dl>
+          </td>
+          <td width="649">
+            <span class="tablacentro1"
+              ><img src="img/rodrigo-barbero.jpg" alt="g9" class="galeria92"
+            /></span>
+          </td>
+        </tr>
+      </table>
+      <table width="1269" height="376" border="0" class="tablacentro">
+        <tr>
+          <td width="610">
+            <span class="tablacentro1"
+              ><img src="img/alberto-barbero.jpg" alt="g9" class="galeria93"
+            /></span>
+          </td>
+          <td width="649" class="letras">
+            <dl>
+              <dt>
+                <span class="tablacentro1"><strong>Nombre:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Alberto Carlos</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Apellido:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Ugarte Ruiz</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Edad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">25 años</span></li>
+              </dd>
+              <dt>
+                <span class="tablacentro1"><strong>Especialidad:</strong></span>
+              </dt>
+              <dd>
+                <li><span class="tablacentro1">Corte de todo tipo</span></li>
+              </dd>
+              <dd>
+                <li>
+                  <span class="tablacentro1">Corte y delineado de barba</span>
+                </li>
+              </dd>
+              <dd>
+                <li><span class="tablacentro1">Tinte de barba</span></li>
+              </dd>
+            </dl>
+          </td>
+        </tr>
+      </table>
+      <p><br /></p>
+    </div>
+  </body>
+</html>

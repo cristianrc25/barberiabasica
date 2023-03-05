@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Documento sin título</title>
+
+    <style>
+      /* Establece el color de fondo del body en un tono rojizo oscuro */
+      body {
+        background-color: #770327;
+        /* Establece una imagen de fondo para el body */
+        background-image: url(img/Publicidad-para-barberia.jpg);
+        /* Evita que la imagen de fondo se repita */
+        background-repeat: no-repeat;
+        /* Establece la familia de fuentes para el texto del body */
+        font-family: Verdana, Geneva, sans-serif;
+        /* Establece el texto del body en el centro de la página */
+        text-align: center;
+      }
+
+      /* Hace que los elementos dentro del contenedor se muestren en línea y centrados horizontal y verticalmente */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Establece el color de fondo del contenedor como transparente */
+        background-color: transparent;
+        /* Agrega un espacio de relleno de 10 píxeles arriba y abajo, y 0 píxeles a la izquierda y derecha */
+        padding: 10px 0;
+      }
+
+      /* Establece el color del texto y la decoración del enlace en blanco */
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        /* Agrega un margen de 0 píxeles arriba y abajo, y 30 píxeles a la izquierda y derecha */
+        margin: 0 30px;
+        /* Establece el tamaño de fuente del texto en 20 píxeles */
+        font-size: 20px;
+        /* Agrega una transición suave en la propiedad de color del texto */
+        transition: color 0.3s;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+
+      /* Establece el color del texto del enlace cuando se pasa el mouse sobre él en un tono amarillo */
+      .navbar a:hover {
+        color: #fc0;
+        /* Escala el tamaño del enlace al 105% del tamaño original */
+        transform: scale(1.05);
+      }
+
+      /* Establece el texto de todos los elementos <p> dentro del body en el centro de la página */
+      body p {
+        text-align: center;
+        /* Establece la familia de fuentes para el texto de los elementos <p> en Verdana, Geneva o cualquier otra fuente sans-serif */
+        font-family: Verdana, Geneva, sans-serif;
+        /* Establece el tamaño de fuente para el texto de los elementos <p> en 36 píxeles */
+        font-size: 36;
+      }
+
+      /* Establece el color del texto dentro de la clase "letras" en un tono de gris claro */
+      .letras {
+        color: #f0f0f0;
+        /* Establece el grosor de la fuente dentro de la clase "letras" en negrita */
+        font-weight: bold;
+        /* Establece el tamaño de fuente dentro de la clase "letras" en 18 píxeles */
+        font-size: 18px;
+      }
+
+      /* Establece el color del texto dentro de la clase "h1" en un tono de marrón dorado */
+      .h1 {
+        color: #bd8f3f;
+        /* Establece la familia de fuentes para el texto dentro de la clase "h1" en Tahoma, Geneva o cualquier otra fuente sans-serif */
+        font-family: Tahoma, Geneva, sans-serif;
+        /* Establece el texto dentro de la clase "h1" en el centro de la página */
+        text-align: center;
+      }
+
+      /* Establece el color del texto dentro de cualquier elemento que tenga la clase "SUB" dentro de un elemento que tenga la clase "letras" en naranja */
+      .letras .SUB {
+        color: #ff9900;
+        /* Establece la familia de fuentes para el texto dentro de cualquier elemento que tenga la clase "SUB" dentro de un elemento que tenga la clase "letras" en Arial, Helvetica o cualquier otra fuente sans-serif */
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Establece el texto dentro de cualquier elemento que tenga la clase "tablacentro" en el centro de la página */
+      .tablacentro {
+        text-align: center;
+        /* Establece la familia de fuentes para el texto dentro de cualquier elemento que tenga la clase "tablacentro" en Verdana, Geneva o cualquier otra fuente sans-serif */
+        font-family: Verdana, Geneva, sans-serif;
+      }
+
+      /*Efecto para tamaño , animacion y efectos de fotos */
+      /* Establece las propiedades de visualización y diseño para cualquier elemento que tenga la clase "fotos" */
+      .fotos {
+        /* Establece el margen para cualquier elemento que tenga la clase "fotos" */
+        margin: 20px;
+        /* Establece el ancho y alto para cualquier elemento que tenga la clase "fotos" */
+        width: 316x;
+        height: 286px;
+        /* Establece el radio de la esquina para cualquier elemento que tenga la clase "fotos" */
+        border-radius: 5px;
+        /* Establece el color de fondo para cualquier elemento que tenga la clase "fotos" */
+        background: var(--i);
+        /* Establece el tamaño de la imagen de fondo para cualquier elemento que tenga la clase "fotos" */
+        background-size: cover;
+        /* Establece las sombras para cualquier elemento que tenga la clase "fotos" */
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8);
+        /* Establece la propiedad overflow para cualquier elemento que tenga la clase "fotos" */
+        overflow: hidden;
+        /* Establece la duración y efecto de la transición para cualquier elemento que tenga la clase "fotos" */
+        transition: 0.5s;
+        /* Establece cómo se ajusta la imagen dentro del contenedor para cualquier elemento que tenga la clase "fotos" */
+        object-fit: cover;
+      }
+
+      /* Animacion de fotor y tiempo */
+      .fotos:hover {
+        /* Selecciona los elementos con la clase "fotos" cuando el usuario coloca el cursor sobre ellos */
+        transform: scale(
+          1.2
+        ); /* Escala el elemento a un 120% de su tamaño original */
+        opacity: 1; /* Establece la opacidad del elemento a 1 (totalmente visible) */
+      }
+
+      /* Efecto par imagenes tamaño */
+      .galeria9 {
+        margin: 20px; /* Establece un margen de 20 píxeles alrededor del elemento */
+        width: 522x; /* Establece el ancho del elemento en 522 píxeles */
+        height: 743px; /* Establece la altura del elemento en 743 píxeles */
+        border-radius: 5px; /* Establece la curvatura de los bordes del elemento a 5 píxeles */
+        background: var(
+          --i
+        ); /* Establece el fondo del elemento usando una variable CSS personalizada */
+        background-size: cover; /* Escala el fondo del elemento para cubrir todo su tamaño */
+        box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); /* Agrega una sombra al elemento para darle profundidad */
+        overflow: hidden; /* Oculta cualquier contenido que se desborde del elemento */
+        transition: 0.5s; /* Agrega una transición de 0.5 segundos a cualquier cambio de estilo en el elemento */
+        object-fit: cover; /* Establece cómo se ajusta la imagen de fondo al elemento (en este caso, se cubre todo el elemento) */
+      }
+
+      /* Animaciion de imagen */
+      .galeria9:hover {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      /* Cambiar tamaño y estilo de letras */
+      .pregunta {
+        /* Define la fuente del texto */
+        font-family: Verdana, Geneva, sans-serif;
+        /* Centra el texto en su contenedor */
+        text-align: center;
+        /* Define el tamaño de fuente del texto */
+        font-size: 36px;
+        /* Define el color del texto */
+        color: #c1b26f;
+        /* Define el grosor de la fuente del texto */
+        font-weight: bold;
+      }
+
+      /* Cambiar tamaño y estilo de letras */
+      .direccion {
+        /* Establece la alineación del texto a la izquierda */
+        text-align: left;
+        /* Establece la fuente */
+        font-family: Verdana, Geneva, sans-serif;
+        /* Establece el color del texto a amarillo */
+        color: #fc0;
+        /* Establece el grosor de la fuente a negrita */
+        font-weight: bold;
+        /* Establece el tamaño de la fuente a 24px */
+        font-size: 24px;
+      }
+      /* Cambiar posicion letras */
+      .direccion1 {
+        /* Establece la alineación del texto a la izquierda */
+        text-align: left;
+        /* Establece el color del texto en blanco */
+        color: #fff;
+      }
+      /* Cambiar posicion de mapa 
+establece la alineación del texto del elemento con clase "mapa" a la derecha.*/
+      .mapa {
+        text-align: right;
+      }
+
+      /* Estilos para una tabla HTML */
+      .tablita {
+        border-collapse: collapse; /* Hace que los bordes de la tabla se vean más suaves al juntarlos */
+        width: 100%; /* Define que la tabla ocupe el 100% del ancho disponible */
+        max-width: 600px; /* Establece un ancho máximo para la tabla */
+        margin: 0 auto; /* Centra la tabla horizontalmente */
+      }
+
+      /* Estilos para las celdas de la cabecera y la descripción */
+      .cabeza,
+      .descripcion {
+        border: 1px solid #ddd; /* Establece un borde de 1 píxel sólido con un color gris claro */
+        padding: 10px; /* Establece un espacio interno de 10 píxeles para el contenido de la celda */
+        text-align: center; /* Centra el contenido de la celda horizontalmente */
+      }
+
+      /* Estilos para la cabecera */
+      .cabeza {
+        background-color: #fc0; /* Establece el color de fondo de la cabecera en amarillo */
+        color: #770327; /* Establece el color del texto de la cabecera en un tono rojo oscuro */
+      }
+
+      /* Estilos para la descripción */
+      .descripcion {
+        font-size: 24px; /* Establece el tamaño de fuente de la descripción en 24 píxeles */
+        font-weight: bold; /* Establece el grosor de la fuente de la descripción en negrita */
+        margin-bottom: 20px; /* Establece un margen inferior de 20 píxeles para la descripción */
+        color: white; /* Establece el color del texto de la descripción en blanco */
+      }
+
+      /* Estilos para el título de la tabla */
+      caption {
+        font-size: 24px; /* Establece el tamaño de fuente del título en 24 píxeles */
+        font-weight: bold; /* Establece el grosor de la fuente del título en negrita */
+        margin-bottom: 20px; /* Establece un margen inferior de 20 píxeles para el título */
+        color: #fc0; /* Establece el color del texto del título en amarillo */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Esto es el navbar-->
+    <nav class="navbar">
+      <a href="Inicio.html">Inicio</a>
+      <a href="personal.html">Personal</a>
+      <a href="formulario.html">Reserva</a>
+      <a href="contacto.html">Contactanos</a>
+    </nav>
+
+    <!--Imagen del logo-->
+    <p><img src="img/3.png" width="436" height="457" alt="Imagen" /></p>
+
+    <!-- Aquí se utiliza la etiqueta <p> para crear un párrafo y la clase "letras" para dar estilo a su contenido -->
+    <p>
+      <span class="letras"
+        >Gran estilo. Grandes cortes de pelo. Barberos impresionantes.</span
+      >
+    </p>
+    <!-- Aquí se utiliza la etiqueta <p> para crear otro párrafo y se le agrega la clase "letras" para darle estilo a su contenido -->
+    <p class="letras">
+      En Sublime <span class="SUB">BARBERIA CIBREIRO</span>, nos esforzamos por
+      crear la apariencia tradicional de una barbería
+    </p>
+    <!-- Aquí se utiliza la etiqueta <p> para crear otro párrafo y se le agrega la clase "letras" para darle estilo a su contenido -->
+    <p class="letras">
+      con el más alto nivel de habilidad, servicio y estilo para que luzcas y te
+      sientas lo mejor posible.
+    </p>
+    <br />
+
+    <!-- Interseccion de video-->
+    <p class="letras">
+      <iframe
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/MkO_0Hi2Ttc"
+        title="Gentlemen Haircut &amp; Beard Transformation"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </p>
+    <br /><br />
+
+    <h1 class="h1"><u>GALERIA</u></h1>
+    <div align="center">
+      <!-- Creador de tablas con imagenes -->
+      <table width="1433" height="741" border="0">
+        <tr class="agendas">
+          <td width="345" height="380" class="tablacentro">
+            <img
+              src="img/galeria 1.jpg"
+              alt="g1"
+              width="316"
+              height="284"
+              class="fotos"
+            />
+          </td>
+          <td width="337" class="tablacentro">
+            <img
+              src="img/galeria2.jpg"
+              alt="g2"
+              width="316"
+              height="286"
+              class="fotos"
+            />
+          </td>
+          <td width="348" class="tablacentro">
+            <img
+              src="img/galeria3.jpg"
+              alt="g3"
+              width="316"
+              height="284"
+              class="fotos"
+            />
+          </td>
+          <td width="385" class="tablacentro">
+            <img
+              src="img/galeri4.jpg"
+              alt="g4"
+              width="316"
+              height="286"
+              class="fotos"
+            />
+          </td>
+        </tr>
+        <tr class="agendas">
+          <td height="355" class="tablacentro">
+            <img
+              src="img/galeria 5.jpg"
+              alt="g5"
+              width="316"
+              height="284"
+              class="fotos"
+            />
+          </td>
+          <td class="tablacentro">
+            <img
+              src="img/galeria5.jpeg"
+              alt="g6"
+              width="316"
+              height="284"
+              class="fotos"
+            />
+          </td>
+          <td class="tablacentro">
+            <img
+              src="img/galeria7.jpg"
+              alt="g7"
+              width="316"
+              height="284"
+              class="fotos"
+            />
+          </td>
+          <td class="tablacentro">
+            <img
+              src="img/galeria8.jpg"
+              alt="g8"
+              width="318"
+              height="286"
+              class="fotos"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br /><br /><br />
+    <!-- Titulo de la mision vision-->
+    <p align="left" class="pregunta"><u>MISION Y VISION</u></p>
+    <br /><br /><br />
+    <table width="1491" height="376" border="0" class="tablacentro">
+      <tr>
+        <td width="867" class="letras">
+          <p>Nuestra misión es hacer que se vea</p>
+          <p>y se sienta lo mejor posible con una</p>
+          <p>variedad de servicios de barbería que</p>
+          <p>se adaptan a sus necesidades, objetivos</p>
+          <p>y preferencias personales. Reconocemos</p>
+          <p>la importancia de un cabello perfectamente</p>
+          <p>peinado que se adapte a su personalidad.</p>
+          <p>Esto es lo que nos esforzamos por lograr</p>
+          <p>mientrasbrindamos comodidad y</p>
+          <p>conveniencia durante toda su experiencia.</p>
+        </td>
+        <td width="779">
+          <img
+            src="img/imagen3.png"
+            alt="g9"
+            width="522"
+            height="743"
+            class="galeria9"
+          />
+        </td>
+      </tr>
+    </table>
+    <br /><br /><br />
+
+    <!--Calendario de promociones-->
+    <table class="tablita">
+      <caption>
+        <u>Promociones de la semana</u>
+      </caption>
+      <br />
+      <tr>
+        <th class="cabeza">Día</th>
+        <th class="cabeza">Promoción</th>
+      </tr>
+      <tr>
+        <td class="descripcion">Lunes</td>
+        <td class="descripcion">Mascarilla gratis</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Martes</td>
+        <td class="descripcion">Descuento del 5% en cortes de peinado</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Miércoles</td>
+        <td class="descripcion">Limpieza facial y depilacion 2x1</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Jueves</td>
+        <td class="descripcion">Perfilado con un 3% de descuento</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Viernes</td>
+        <td class="descripcion">Descuento del 2% en todo</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Sábado</td>
+        <td class="descripcion">Pague el precio de dos por un corte</td>
+      </tr>
+      <tr>
+        <td class="descripcion">Domingo</td>
+        <td class="descripcion">Atencion hasta medio dia</td>
+      </tr>
+    </table>
+
+    <!-- clases para direccion -->
+    <p class="direccion"><u>Direccion</u></p>
+    <p class="direccion1"><span class="direccion1">Urb/El Trapiche</span></p>
+    <p class="direccion1">
+      <span class="direccion1">Calle/Los Totaises N*50 frente a plaza</span>
+    </p>
+    <!-- link de google maps-->
+    <p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3799.740407272008!2d-63.074158434128385!3d-17.75686667057927!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ1JzIzLjgiUyA2M8KwMDQnMTguMiJX!5e0!3m2!1ses!2sbo!4v1677785301511!5m2!1ses!2sbo"
+        width="600"
+        height="450"
+        class="mapa"
+        style="border: 0; text-align: right"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </p>
+  </body>
+</html>
